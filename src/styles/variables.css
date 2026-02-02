@@ -1,0 +1,39 @@
+
+:root {
+  /* Brand Colors - Nature/Green Theme */
+  --color-primary: #2d6a4f;   /* Deep Forest Green */
+  --color-primary-light: #52b788; /* Fresh Leaf Green */
+  --color-primary-dark: #1b4332;  /* Darker Green */
+  --color-accent: #d8f3dc;    /* Very Light Green/Mint */
+  --color-secondary: #f4a261; /* Warm Earthy Orange */
+  
+  /* Text Colors */
+  --color-text-main: #333333;
+  --color-text-light: #666666;
+  --color-white: #ffffff;
+  
+  /* Background Colors */
+  --bg-main: #ffffff;
+  --bg-section: #f0f7f4;      /* Light greenish grey */
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Font Families */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', sans-serif; /* Modern, clean heading font */
+}
