@@ -4,12 +4,15 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
 const DATA_FILE = path.join(__dirname, 'data', 'visits.json');
+
+// Serve static files from the React build directory
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Ensure data directory exists
 if (!fs.existsSync(path.join(__dirname, 'data'))) {
@@ -48,6 +51,11 @@ app.post('/api/visits/increment', (req, res) => {
         console.error('Error incrementing visits:', error);
         res.status(500).json({ error: 'Failed to increment visits' });
     }
+});
+
+// Handle React routing, return all requests to React app
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(PORT, () => {

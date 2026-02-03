@@ -15,7 +15,6 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Basic validation
         if (!formData.name || !formData.email || !formData.message) {
             setStatus({ type: 'error', message: 'Please fill in all fields.' });
             return;
@@ -28,7 +27,6 @@ const Contact = () => {
         };
 
         try {
-            dataService.saveMessage(newMessage);
             dataService.saveMessage(newMessage);
             alert("Thank you! Your message has been sent successfully.");
             navigate('/');
@@ -76,15 +74,30 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h4 style={{ marginBottom: '0.5rem' }}>Email</h4>
-
                                 <p style={{ opacity: 0.8 }}>Info@namrtagreen.org</p>
                             </div>
                         </div>
                     </div>
 
-                    {/* Map Placeholder */}
-                    <div style={{ marginTop: '3rem', width: '100%', height: '250px', background: '#eee', borderRadius: 'var(--radius-lg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <p style={{ color: '#999' }}>Google Map Placeholder</p>
+                    {/* Interactive Google Map */}
+                    <div style={{
+                        marginTop: '3rem',
+                        width: '100%',
+                        height: '250px',
+                        borderRadius: 'var(--radius-lg)',
+                        overflow: 'hidden',
+                        boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
+                    }}>
+                        <iframe
+                            title="Office Location"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2938.8351659345224!2d-106.2570081!3d42.852445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8760bc210212377b%3A0xc3f17387d5668e27!2s5830%20E%202nd%20St%2C%20Casper%2C%20WY%2082609%2C%20USA!5e0!3m2!1sen!2sin!4v1700000000000"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </div>
                 </div>
 
@@ -128,7 +141,7 @@ const Contact = () => {
                                 placeholder="How can we help?"
                             ></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
+                        <button type="submit" className="btn btn-primary" style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Send size={20} style={{ marginRight: '0.5rem' }} /> Send Message
                         </button>
                     </form>

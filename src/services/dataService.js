@@ -23,7 +23,7 @@ export const dataService = {
 
     // --- Projects ---
     getProjects: () => {
-        const DATA_VERSION = '2.0';
+        const DATA_VERSION = '2.3';
         const currentVersion = localStorage.getItem('data_version');
         let projects = null;
 
@@ -32,126 +32,31 @@ export const dataService = {
         }
 
         if (!projects) {
-            // Default Data (Version 2.0)
+            // Default Data (Version 2.3)
             projects = [
                 {
                     id: 1,
                     title: "Project Urban Green",
                     location: "India",
                     image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
-                    description: "Transforming concrete jungles into green corridors by planting native trees along highways."
+                    description: "Transforming concrete jungles into green corridors by planting native trees along highways.",
+                    details: "Project Urban Green is our flagship initiative aimed at reducing the urban heat island effect. By strategically planting native tree species along major highways and in available urban pockets, we are creating green corridors that not only beautify the city but also significantly improve air quality. We work closely with municipal corporations and local communities to ensure the long-term survival of every sapling planted. Our goal is to plant 100,000 trees across 5 major metro cities by 2030."
                 },
                 {
                     id: 2,
                     title: "River Rejuvenation",
                     location: "India",
                     image: "https://images.unsplash.com/photo-1466611632172-22b467ef8652?auto=format&fit=crop&w=600&q=80",
-                    description: "Cleaning and planting along river banks to restore flow and biodiversity."
+                    description: "Cleaning and planting along river banks to restore flow and biodiversity.",
+                    details: "Rivers are the lifelines of our ecosystem, yet many are choking with pollution. Our River Rejuvenation project focuses on cleaning up river banks, removing plastic waste, and planting deep-rooted native vegetation to arrest soil erosion. This holistic approach helps in restoring the natural flow of the river, improving water quality, and bringing back aquatic life. We also conduct awareness drives to educate river-side communities about sustainable waste disposal."
                 },
                 {
                     id: 3,
                     title: "Coastal Shield Mangroves",
                     location: "India",
                     image: "https://images.unsplash.com/photo-1572099606223-6e29045d7de3?auto=format&fit=crop&w=600&q=80",
-                    description: "Planting mangroves to protect coastlines from erosion and provide habitat for marine life."
-                },
-                {
-                    id: 4,
-                    title: "Future Roots Schools",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80",
-                    description: "Creating green belts in 50+ rural schools and teaching students about environmental stewardship."
-                },
-                {
-                    id: 5,
-                    title: "Agroforestry Initiative",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1622383563227-0440114a871b?auto=format&fit=crop&w=600&q=80",
-                    description: "Helping farmers integrate trees into their farms to improve soil health and increase income."
-                },
-                {
-                    id: 6,
-                    title: "City Lungs Vertical Gardens",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80",
-                    description: "Installing vertical gardens on building facades to reduce urban heat islands and improve air quality."
-                },
-                {
-                    id: 7,
-                    title: "Urban Forestry Initiative",
-                    location: "USA",
-                    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
-                    description: "Planting trees in urban areas to combat heat islands and provide shade."
-                },
-                {
-                    id: 8,
-                    title: "Desert Greening Project",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80",
-                    description: "Restoring green cover in arid regions using drought-resistant native species."
-                },
-                {
-                    id: 9,
-                    title: "Wetland Restoration",
-                    location: "USA",
-                    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80",
-                    description: "Protecting and restoring critical wetland ecosystems to support diverse wildlife."
-                },
-                {
-                    id: 10,
-                    title: "Spice Garden Conservation",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1596079890744-c1a0462d0975?auto=format&fit=crop&w=600&q=80",
-                    description: "Preserving native spice varieties and promoting organic farming practices in the Western Ghats."
-                },
-                {
-                    id: 11,
-                    title: "Himalayan Pine Restoration",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=600&q=80",
-                    description: "Reforesting high-altitude areas with native pine to prevent landslides and soil erosion."
-                },
-                {
-                    id: 12,
-                    title: "Community Garden Network",
-                    location: "USA",
-                    image: "https://images.unsplash.com/photo-1591857177580-dc82b9af00c2?auto=format&fit=crop&w=600&q=80",
-                    description: "Building community food gardens to support local food security and education."
-                },
-                {
-                    id: 13,
-                    title: "Rooftop Farm Project",
-                    location: "USA",
-                    image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80",
-                    description: "Converting unused rooftops into productive green farms to reduce building temperatures."
-                },
-                {
-                    id: 14,
-                    title: "Sacred Grove Restoration",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=600&q=80",
-                    description: "Protecting ancient sacred groves that are hotspots of biodiversity in the Northeast."
-                },
-                {
-                    id: 15,
-                    title: "Urban Lake Cleanup",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1583096114844-06ce5a5f2771?auto=format&fit=crop&w=600&q=80",
-                    description: "Revitalizing polluted urban lakes and creating walking tracks for citizens."
-                },
-                {
-                    id: 16,
-                    title: "Redwood Conservation",
-                    location: "USA",
-                    image: "https://images.unsplash.com/photo-1543355208-886915654324?auto=format&fit=crop&w=600&q=80",
-                    description: "Protecting old-growth redwood forests from logging and development."
-                },
-                {
-                    id: 17,
-                    title: "Native Prairie Restoration",
-                    location: "USA",
-                    image: "https://images.unsplash.com/photo-1472214103451-9374bd1c7dd1?auto=format&fit=crop&w=600&q=80",
-                    description: "Reintroducing native grasses and bison to restore the original prairie ecosystem."
+                    description: "Planting mangroves to protect coastlines from erosion and provide habitat for marine life.",
+                    details: "Mangroves are nature's first line of defense against cyclones and rising sea levels. The Coastal Shield Mangroves project is dedicated to restoring degraded mangrove ecosystems along India's coastline. These forests act as critical nurseries for fish and protect inland areas from storm surges. We involve local fishing communities in the planting process, providing them with alternative livelihoods while securing their future against climate change risks."
                 }
             ];
 
@@ -219,7 +124,7 @@ export const dataService = {
         return localStorage.getItem('isAdminAuthenticated') === 'true';
     },
     login: (username, password) => {
-        if (username === 'admin' && password === '123') {
+        if (username === 'NAMRTAGREENINDIA' && password === 'NAMRTAGREENUSA') {
             localStorage.setItem('isAdminAuthenticated', 'true');
             return true;
         }

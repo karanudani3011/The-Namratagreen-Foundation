@@ -10,7 +10,8 @@ const AdminProjects = () => {
         title: '',
         location: '',
         image: '',
-        description: ''
+        description: '',
+        details: ''
     });
 
     useEffect(() => {
@@ -43,7 +44,7 @@ const AdminProjects = () => {
         dataService.saveProject(projectData);
         setIsModalOpen(false);
         setEditingProject(null);
-        setFormData({ title: '', location: '', image: '', description: '' });
+        setFormData({ title: '', location: '', image: '', description: '', details: '' });
         loadProjects();
     };
 
@@ -54,7 +55,7 @@ const AdminProjects = () => {
                 <button
                     onClick={() => {
                         setEditingProject(null);
-                        setFormData({ title: '', location: '', image: '', description: '' });
+                        setFormData({ title: '', location: '', image: '', description: '', details: '' });
                         setIsModalOpen(true);
                     }}
                     className="btn btn-primary"
@@ -147,12 +148,22 @@ const AdminProjects = () => {
                                 </div>
                             </div>
                             <div style={{ marginBottom: '1.5rem' }}>
-                                <label style={{ display: 'block', marginBottom: '0.5rem' }}>Description</label>
+                                <label style={{ display: 'block', marginBottom: '0.5rem' }}>Short Description</label>
                                 <textarea
                                     value={formData.description}
                                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                                     required
-                                    rows="4"
+                                    rows="2"
+                                    style={{ width: '100%', padding: '8px', border: '1px solid #ddd', borderRadius: '4px' }}
+                                ></textarea>
+                            </div>
+                            <div style={{ marginBottom: '1.5rem' }}>
+                                <label style={{ display: 'block', marginBottom: '0.5rem' }}>Full Details</label>
+                                <textarea
+                                    value={formData.details || ''}
+                                    onChange={(e) => setFormData({ ...formData, details: e.target.value })}
+                                    rows="6"
+                                    placeholder="Enter detailed project description here (paragraphs will be preserved)..."
                                     style={{ width: '100%', padding: '8px', border: '1px solid #ddd', borderRadius: '4px' }}
                                 ></textarea>
                             </div>

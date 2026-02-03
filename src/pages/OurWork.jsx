@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { dataService } from '../services/dataService';
 
 const OurWork = () => {
@@ -41,28 +41,32 @@ const OurWork = () => {
                 gap: '2rem'
             }}>
                 {projects.map((project, index) => (
-                    <div key={index} style={{
-                        borderRadius: 'var(--radius-md)',
-                        overflow: 'hidden',
-                        boxShadow: 'var(--shadow-md)',
-                        background: 'white',
-                        transition: 'transform 0.3s'
-                    }}>
-                        <div style={{ height: '220px', overflow: 'hidden' }}>
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
-                                onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'}
-                                onMouseOut={(e) => e.target.style.transform = 'scale(1.0)'}
-                            />
+                    <Link to={`/our-work/${project.id}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <div style={{
+                            borderRadius: 'var(--radius-md)',
+                            overflow: 'hidden',
+                            boxShadow: 'var(--shadow-md)',
+                            background: 'white',
+                            transition: 'transform 0.3s',
+                            height: '100%'
+                        }}
+                            onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+                            onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                        >
+                            <div style={{ height: '220px', overflow: 'hidden' }}>
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
+                                />
+                            </div>
+                            <div style={{ padding: '1.5rem' }}>
+                                <span style={{ fontSize: '0.9rem', color: 'var(--color-primary)', fontWeight: '600' }}>{project.location}</span>
+                                <h3 style={{ margin: '0.5rem 0' }}>{project.title}</h3>
+                                <p style={{ color: 'var(--color-text-light)' }}>{project.description}</p>
+                            </div>
                         </div>
-                        <div style={{ padding: '1.5rem' }}>
-                            <span style={{ fontSize: '0.9rem', color: 'var(--color-primary)', fontWeight: '600' }}>{project.location}</span>
-                            <h3 style={{ margin: '0.5rem 0' }}>{project.title}</h3>
-                            <p style={{ color: 'var(--color-text-light)' }}>{project.description}</p>
-                        </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

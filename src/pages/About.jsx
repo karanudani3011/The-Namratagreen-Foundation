@@ -8,28 +8,87 @@ const About = () => {
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                 <h1 className="sectionTitle">Who We Are</h1>
                 <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', color: 'var(--color-text-light)' }}>
-                    Namratagreen Foundation is a non-profit organization dedicated to fostering a sustainable relationship between humanity and nature.
+                    Namrtagreen Organization Inc. is a non-profit organization dedicated to fostering a sustainable relationship between humanity and nature.
                 </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem' }}>
-                <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', height: '400px' }}>
-                    <img
-                        src="https://images.unsplash.com/photo-1552083858-5847641f303c?auto=format&fit=crop&w=800&q=80"
-                        alt="Our Team"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                </div>
-                <div>
-                    <h2 style={{ color: 'var(--color-primary-dark)', marginBottom: '1.5rem' }}>Our Story</h2>
-                    <p style={{ marginBottom: '1rem', lineHeight: '1.8' }}>
-                        Founded in 2026, we started as a small group of volunteers planting trees on weekends. Today, we are a global movement with thousands of members committed to reforestation and environmental education.
-                    </p>
-                    <p style={{ lineHeight: '1.8' }}>
-                        We believe that every seed planted is a promise for a better tomorrow. Our approach combines traditional ecological knowledge with modern conservation science to ensure high survival rates for our plantations.
-                    </p>
-                </div>
+            <div style={{ marginBottom: "6rem" }}>
+                <h2
+                    style={{
+                        color: "var(--color-primary-dark)",
+                        marginBottom: "1.5rem",
+                    }}
+                >
+                    <b>Our Story & Global Vision</b>
+                </h2>
+
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                    ➤ <strong>The Namrtagreen Organization Inc.</strong> is a dedicated non-profit
+                    entity based in the United States, led by our President,
+                    <strong> Mahendra Ayalani</strong>. The organization serves as an
+                    international extension of the impactful social work carried out in India
+                    through the <strong>Namrtagreen Foundation</strong>. Our mission is to bridge
+                    global resources with grassroots social impact, ensuring sustainable and
+                    meaningful change in communities.
+                </p>
+
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                    ➤ Our roots are deeply embedded in community service across India. Through the
+                    Namrtagreen Foundation, we actively engage in a wide range of philanthropic
+                    initiatives designed to uplift underserved communities and preserve social
+                    and cultural values.
+                </p>
+
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                    ➤ In the area of <strong>social welfare and traditions</strong>, we organize
+                    Mass Marriage (<em>Samuh Lagan</em>) ceremonies to help underprivileged
+                    couples begin their lives with dignity and community support.
+                </p>
+
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                    ➤ Our efforts in <strong>education and spirituality</strong> include the
+                    Shrimad Bhagavad Gita Gyan Kasoti, an initiative aimed at nurturing moral
+                    values, spiritual wisdom, and cultural awareness among the youth.
+                </p>
+
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                    ➤ To support <strong>child nutrition and wellbeing</strong>, we regularly
+                    organize Batuk Bhojan programs—community meals for children—in Government
+                    Schools, helping ensure access to nutritious food and a healthier future.
+                </p>
+
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                    ➤ Our <strong>health and relief initiatives</strong> include Free Sharbat
+                    Distribution during extreme summer conditions and Free Blanket and Clothes
+                    Distribution drives during winter, providing immediate relief to those in
+                    need.
+                </p>
+
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                    ➤ We also believe in <strong>empowering talent and cultural expression</strong>.
+                    Through activities such as Mehendi Competitions, we create platforms for
+                    local artists and individuals to showcase their skills, creativity, and
+                    cultural heritage.
+                </p>
+
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                    ➤ The organization is guided by the visionary leadership of
+                    <strong> Mahendra Ayalani</strong>, who oversees both The Namrtagreen
+                    Organization Inc. (USA) and the Namrtagreen Foundation (India). In India, our
+                    mission is further strengthened by committed leaders such as
+                    <strong> Rahul Makadia</strong>, Junagadh District President, and
+                    <strong> Kajal Vala</strong>, President of Mahila Morcha.
+                </p>
+
+                <p style={{ lineHeight: "1.8" }}>
+                    ➤ By establishing a presence in the United States, we are committed to
+                    upholding international standards of <strong>transparency, efficiency, and
+                        accountability</strong>. Every contribution and effort is directed toward
+                    creating long-lasting positive change and building a more compassionate,
+                    inclusive, and sustainable society.
+                </p>
             </div>
+
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', textAlign: 'center' }}>
                 <Link to="/mission#mission" style={{ textDecoration: 'none', color: 'inherit' }}>

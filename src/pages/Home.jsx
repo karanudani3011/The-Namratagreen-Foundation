@@ -33,7 +33,7 @@ const Home = () => {
 
                 <div className="statsGrid">
                     <div className="statItem">
-                        <span className="statNumber">50K+</span>
+                        <span className="statNumber">50K</span>
                         <span>Trees Planted</span>
                     </div>
                     <div className="statItem">
@@ -41,17 +41,17 @@ const Home = () => {
                         <span>Projects Completed</span>
                     </div>
                     <div className="statItem">
-                        <span className="statNumber">5K+</span>
+                        <span className="statNumber">20</span>
                         <span>Volunteers</span>
                     </div>
-                    <div className="statItem">
-                        <span className="statNumber">10+</span>
+                    { /*<div className="statItem">
+                        <span className="statNumber"></span>
                         <span>States Covered</span>
-                    </div>
+                    </div>*/}
                 </div>
             </section>
 
-            {/* Focus Areas */}
+            {/* Focus Areas
             <section className="section" style={{ backgroundColor: 'var(--bg-section)' }}>
                 <div className="container">
                     <h2 className="sectionTitle" style={{ textAlign: 'center' }}>Our Focus Areas</h2>
@@ -76,7 +76,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>  */}
 
             {/* Call to Action */}
             <section className="section" style={{ textAlign: 'center', padding: '6rem 1rem' }}>
