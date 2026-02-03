@@ -18,8 +18,8 @@ const AdminProjects = () => {
         loadProjects();
     }, []);
 
-    const loadProjects = () => {
-        setProjects(dataService.getProjects());
+    const loadProjects = async () => {
+        setProjects(await dataService.getProjects());
     };
 
     const handleEdit = (project) => {
@@ -28,20 +28,20 @@ const AdminProjects = () => {
         setIsModalOpen(true);
     };
 
-    const handleDelete = (id) => {
+    const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this project?')) {
-            dataService.deleteProject(id);
+            await dataService.deleteProject(id);
             loadProjects();
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const projectData = {
             ...formData,
             id: editingProject ? editingProject.id : null
         };
-        dataService.saveProject(projectData);
+        await dataService.saveProject(projectData);
         setIsModalOpen(false);
         setEditingProject(null);
         setFormData({ title: '', location: '', image: '', description: '', details: '' });

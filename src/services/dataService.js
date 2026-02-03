@@ -1,8 +1,35 @@
+const DEFAULT_PROJECTS = [
+    {
+        id: 1,
+        title: "Project Urban Green",
+        location: "India",
+        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
+        description: "Transforming concrete jungles into green corridors by planting native trees along highways.",
+        details: "Project Urban Green is our flagship initiative aimed at reducing the urban heat island effect. By strategically planting native tree species along major highways and in available urban pockets, we are creating green corridors that not only beautify the city but also significantly improve air quality. We work closely with municipal corporations and local communities to ensure the long-term survival of every sapling planted. Our goal is to plant 100,000 trees across 5 major metro cities by 2030."
+    },
+    {
+        id: 2,
+        title: "River Rejuvenation",
+        location: "India",
+        image: "https://images.unsplash.com/photo-1466611632172-22b467ef8652?auto=format&fit=crop&w=600&q=80",
+        description: "Cleaning and planting along river banks to restore flow and biodiversity.",
+        details: "Rivers are the lifelines of our ecosystem, yet many are choking with pollution. Our River Rejuvenation project focuses on cleaning up river banks, removing plastic waste, and planting deep-rooted native vegetation to arrest soil erosion. This holistic approach helps in restoring the natural flow of the river, improving water quality, and bringing back aquatic life. We also conduct awareness drives to educate river-side communities about sustainable waste disposal."
+    },
+    {
+        id: 3,
+        title: "Coastal Shield Mangroves",
+        location: "India",
+        image: "https://images.unsplash.com/photo-1572099606223-6e29045d7de3?auto=format&fit=crop&w=600&q=80",
+        description: "Planting mangroves to protect coastlines from erosion and provide habitat for marine life.",
+        details: "Mangroves are nature's first line of defense against cyclones and rising sea levels. The Coastal Shield Mangroves project is dedicated to restoring degraded mangrove ecosystems along India's coastline. These forests act as critical nurseries for fish and protect inland areas from storm surges. We involve local fishing communities in the planting process, providing them with alternative livelihoods while securing their future against climate change risks."
+    }
+];
+
 export const dataService = {
     // --- Visits ---
     getVisits: async () => {
         try {
-            const response = await fetch('/api/visits');
+            const response = await fetch('/api/visits.php');
             if (!response.ok) return { count: 0 };
             return await response.json();
         } catch (error) {
@@ -12,7 +39,7 @@ export const dataService = {
     },
     incrementVisit: async () => {
         try {
-            const response = await fetch('/api/visits/increment', { method: 'POST' });
+            const response = await fetch('/api/visits.php', { method: 'POST' });
             if (!response.ok) return { count: 0 };
             return await response.json();
         } catch (error) {
@@ -22,68 +49,41 @@ export const dataService = {
     },
 
     // --- Projects ---
-    getProjects: () => {
-        const DATA_VERSION = '2.3';
-        const currentVersion = localStorage.getItem('data_version');
-        let projects = null;
-
-        if (currentVersion === DATA_VERSION) {
-            projects = JSON.parse(localStorage.getItem('projects'));
+    getProjects: async () => {
+        try {
+            const response = await fetch('/api/projects.php');
+            if (!response.ok) return DEFAULT_PROJECTS;
+            return await response.json();
+        } catch (error) {
+            console.error('Error fetching projects (using fallback):', error);
+            return DEFAULT_PROJECTS;
         }
-
-        if (!projects) {
-            // Default Data (Version 2.3)
-            projects = [
-                {
-                    id: 1,
-                    title: "Project Urban Green",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
-                    description: "Transforming concrete jungles into green corridors by planting native trees along highways.",
-                    details: "Project Urban Green is our flagship initiative aimed at reducing the urban heat island effect. By strategically planting native tree species along major highways and in available urban pockets, we are creating green corridors that not only beautify the city but also significantly improve air quality. We work closely with municipal corporations and local communities to ensure the long-term survival of every sapling planted. Our goal is to plant 100,000 trees across 5 major metro cities by 2030."
-                },
-                {
-                    id: 2,
-                    title: "River Rejuvenation",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1466611632172-22b467ef8652?auto=format&fit=crop&w=600&q=80",
-                    description: "Cleaning and planting along river banks to restore flow and biodiversity.",
-                    details: "Rivers are the lifelines of our ecosystem, yet many are choking with pollution. Our River Rejuvenation project focuses on cleaning up river banks, removing plastic waste, and planting deep-rooted native vegetation to arrest soil erosion. This holistic approach helps in restoring the natural flow of the river, improving water quality, and bringing back aquatic life. We also conduct awareness drives to educate river-side communities about sustainable waste disposal."
-                },
-                {
-                    id: 3,
-                    title: "Coastal Shield Mangroves",
-                    location: "India",
-                    image: "https://images.unsplash.com/photo-1572099606223-6e29045d7de3?auto=format&fit=crop&w=600&q=80",
-                    description: "Planting mangroves to protect coastlines from erosion and provide habitat for marine life.",
-                    details: "Mangroves are nature's first line of defense against cyclones and rising sea levels. The Coastal Shield Mangroves project is dedicated to restoring degraded mangrove ecosystems along India's coastline. These forests act as critical nurseries for fish and protect inland areas from storm surges. We involve local fishing communities in the planting process, providing them with alternative livelihoods while securing their future against climate change risks."
-                }
-            ];
-
-            // Save updated data and version
-            localStorage.setItem('projects', JSON.stringify(projects));
-            localStorage.setItem('data_version', DATA_VERSION);
-            window.dispatchEvent(new Event('storage'));
-        }
-
-        return projects;
     },
-    saveProject: (project) => {
-        const projects = dataService.getProjects();
-        if (project.id) {
-            const index = projects.findIndex(p => p.id === project.id);
-            if (index !== -1) projects[index] = project;
-        } else {
-            project.id = Date.now();
-            projects.push(project);
+    saveProject: async (project) => {
+        try {
+            const response = await fetch('/api/projects.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(project)
+            });
+            if (response.ok) {
+                window.dispatchEvent(new Event('storage')); // Notify updates (optional, but good for uniformity)
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Error saving project:', error);
         }
-        localStorage.setItem('projects', JSON.stringify(projects));
-        window.dispatchEvent(new Event('storage')); // Notify updates
     },
-    deleteProject: (id) => {
-        const projects = dataService.getProjects().filter(p => p.id !== id);
-        localStorage.setItem('projects', JSON.stringify(projects));
-        window.dispatchEvent(new Event('storage'));
+    deleteProject: async (id) => {
+        try {
+            const response = await fetch(`/api/projects.php?id=${id}`, { method: 'DELETE' });
+            if (response.ok) {
+                window.dispatchEvent(new Event('storage'));
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Error deleting project:', error);
+        }
     },
 
     // --- Messages ---

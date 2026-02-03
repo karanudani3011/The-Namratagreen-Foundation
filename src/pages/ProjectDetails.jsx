@@ -9,15 +9,18 @@ const ProjectDetails = () => {
     const [project, setProject] = useState(null);
 
     useEffect(() => {
-        const projects = dataService.getProjects();
-        // Ensure type matching (id from URL is string, project.id might be number)
-        const foundProject = projects.find(p => p.id.toString() === id);
+        const fetchProject = async () => {
+            const projects = await dataService.getProjects();
+            // Ensure type matching (id from URL is string, project.id might be number)
+            const foundProject = projects.find(p => p.id.toString() === id);
 
-        if (foundProject) {
-            setProject(foundProject);
-        } else {
-            navigate('/our-work'); // Redirect if not found
-        }
+            if (foundProject) {
+                setProject(foundProject);
+            } else {
+                navigate('/our-work'); // Redirect if not found
+            }
+        };
+        fetchProject();
     }, [id, navigate]);
 
     if (!project) return null;

@@ -10,8 +10,8 @@ const OurWork = () => {
         const queryParams = new URLSearchParams(location.search);
         const locationFilter = queryParams.get('location');
 
-        const updateProjects = () => {
-            let allProjects = dataService.getProjects();
+        const updateProjects = async () => {
+            let allProjects = await dataService.getProjects();
             if (locationFilter) {
                 // Case-insensitive comparison just in case
                 allProjects = allProjects.filter(p => p.location.toLowerCase() === locationFilter.toLowerCase());
