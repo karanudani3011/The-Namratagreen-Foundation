@@ -58,7 +58,7 @@ const Dashboard = () => {
                     <h3 style={{ fontSize: '3rem', margin: '0 0 0.5rem 0', color: 'var(--color-accent)' }}>{stats.messages}</h3>
                     <p style={{ color: 'var(--color-text-light)', margin: 0 }}>Contact Messages</p>
                 </div>
-                <div style={{
+                {/* <div style={{
                     background: 'white',
                     padding: '2rem',
                     borderRadius: 'var(--radius-lg)',
@@ -70,7 +70,7 @@ const Dashboard = () => {
                 }}>
                     <h3 style={{ fontSize: '3rem', margin: '0 0 0.5rem 0', color: '#e76f51' }}>{stats.donations}</h3>
                     <p style={{ color: 'var(--color-text-light)', margin: 0 }}>Total Donations</p>
-                </div>
+                </div> */}
             </div>
 
             <div style={{ marginTop: '3rem', background: 'white', padding: '2rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)' }}>
