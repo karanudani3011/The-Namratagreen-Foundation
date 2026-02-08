@@ -16,10 +16,17 @@ const Contact = () => {
     const [status, setStatus] = useState(null);
     const [loading, setLoading] = useState(false);
 
+    const maxChars = 255;
+
     const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        // limit message to 255 characters
+        if (name === "message" && value.length > maxChars) return;
+
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: value
         });
     };
 
@@ -50,6 +57,15 @@ const Contact = () => {
                 type: 'success',
                 message: 'Thank you! Your message has been sent.'
             });
+
+            // Clear form after success
+            setFormData({
+                name: '',
+                email: '',
+                mno: '',
+                message: ''
+            });
+
         } catch (error) {
             console.error(error.response?.data || error.message);
             setStatus({
@@ -141,8 +157,20 @@ const Contact = () => {
                             placeholder="How can we help?"
                             value={formData.message}
                             onChange={handleChange}
+                            maxLength={maxChars}
                             style={{ ...inputStyle, resize: 'none' }}
                         />
+
+                        {/* Character Counter */}
+                        <p style={{
+                            textAlign: "right",
+                            fontSize: "12px",
+                            marginTop: "-10px",
+                            marginBottom: "1rem",
+                            opacity: 0.7
+                        }}>
+                            {formData.message.length}/{maxChars}
+                        </p>
 
                         <button
                             type="submit"
