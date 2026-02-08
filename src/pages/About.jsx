@@ -8,7 +8,7 @@ const About = () => {
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                 <h1 className="sectionTitle">Who We Are</h1>
                 <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', color: 'var(--color-text-light)' }}>
-                    Namrtagreen Organization Inc. is a non-profit organization dedicated to fostering a sustainable relationship between humanity and nature.
+                  The Namrtagreen Organization Inc. is a non-profit organization dedicated to fostering a sustainable relationship between humanity and nature.
                 </p>
             </div>
 

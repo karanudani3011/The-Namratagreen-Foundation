@@ -58,6 +58,10 @@ const Footer = () => {
                             <span>Info@namrtagreen.org</span>
                         </li>
                     </ul>
+
+
+
+                    
                     <div style={{ marginTop: '2rem' }}>
                         <h4 style={{ color: 'white', marginBottom: '1rem', fontSize: '1rem' }}>Follow Us</h4>
                         <div style={{ display: 'flex', gap: '1.5rem' }}>
@@ -107,9 +111,10 @@ const Footer = () => {
 
             <div className="container" style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
                 <p style={{ opacity: 0.6, fontSize: '0.9rem' }}>
-                    &copy; {new Date().getFullYear()}  Namrtagreen Organization Inc. All rights reserved.
+                    &copy; {new Date().getFullYear()} The Namrtagreen Organization Inc. All rights reserved.
                 </p>
-            </div>
+            </div> 
+            
         </footer >
     );
 };
