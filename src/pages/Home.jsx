@@ -14,9 +14,9 @@ const Home = () => {
                         Join the Namratagreen Foundation in our mission to restore forests, protect wildlife, and create a sustainable planet for generations to come.
                     </p>
                     <div className="heroButtons">
-                        <Link to="/donate" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '15px 40px' }}>
+                       <a href='https://buymeacoffee.com/namrtagreen' className="btn btn-primary">
                             Donate Now
-                        </Link>
+                        </a>
                         <Link to="/our-work" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-primary)' }}>
                             Our Work
                         </Link>
@@ -89,9 +89,10 @@ const Home = () => {
                     <Link to="/contact" className="btn btn-outline" style={{ marginRight: '1rem' }}>
                         Volunteer
                     </Link>
-                    <Link to="/donate" className="btn btn-primary">
-                        Donate Today <ArrowRight size={20} style={{ marginLeft: '0.5rem' }} />
-                    </Link>
+                    <a href='https://buymeacoffee.com/namrtagreen' className="btn btn-primary" >
+
+                            Donate Today <ArrowRight size={20} style={{ marginLeft: '0.5rem' }} />
+                        </a>
                 </div>
             </section>
         </>

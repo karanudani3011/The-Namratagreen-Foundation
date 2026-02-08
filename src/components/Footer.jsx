@@ -35,7 +35,9 @@ const Footer = () => {
                     <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                         <li><Link to="/about" style={{ opacity: 0.8 }}>About Us</Link></li>
                         <li><Link to="/our-work" style={{ opacity: 0.8 }}>Our Projects</Link></li>
-                        <li><Link to="/donate" style={{ opacity: 0.8 }}>Donate</Link></li>
+                        <a href='https://buymeacoffee.com/namrtagreen' >
+                            Donate Now
+                        </a>
                         <li><Link to="/terms" style={{ opacity: 0.8 }}>Terms & Privacy</Link></li>
                     </ul>
                 </div>

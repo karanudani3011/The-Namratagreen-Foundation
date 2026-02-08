@@ -39,7 +39,9 @@ const Navbar = () => {
                     </div>
 
                     <Link to="/contact" className={`navLink ${isActive('/contact')}`} onClick={closeMenu}>Contact Us</Link>
-                    <Link to="/donate" className="donateBtn" onClick={closeMenu}>Donate Now</Link>
+                    <a href='https://buymeacoffee.com/namrtagreen' className="btn btn-primary" >
+                            Donate Now
+                        </a>
                 </div>
             </div>
         </nav>
