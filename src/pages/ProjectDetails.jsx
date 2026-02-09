@@ -47,7 +47,7 @@ const ProjectDetails = () => {
 
                 <h1 className="sectionTitle" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>{project.title}</h1>
 
-                <div style={{ lineHeight: '1.8', fontSize: '1.1rem', color: 'var(--color-text)' }}>
+                <div style={{ lineHeight: '1.8', fontSize: '1.1rem', padding: "1.50rem", color: 'var(--color-text)' }}>
                     {project.details ? (
                         project.details.split('\n').map((paragraph, idx) => (
                             <p key={idx} style={{ marginBottom: '1.5rem' }}>{paragraph}</p>
