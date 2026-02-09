@@ -16,13 +16,13 @@ const About = () => {
                 <h2
                     style={{
                         color: "var(--color-primary-dark)",
-                        marginBottom: "1.5rem",
+                        marginBottom: "1.5rem " , padding: "1.50rem" 
                     }}
                 >
                     <b>Our Story & Global Vision</b>
                 </h2>
 
-                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
                     ➤ <strong>The Namrtagreen Organization Inc.</strong> is a dedicated non-profit
                     entity based in the United States, led by our President,
                     <strong> Mahendra Ayalani</strong>. The organization serves as an
@@ -32,46 +32,46 @@ const About = () => {
                     meaningful change in communities.
                 </p>
 
-                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
                     ➤ Our roots are deeply embedded in community service across India. Through the
                     Namrtagreen Foundation, we actively engage in a wide range of philanthropic
                     initiatives designed to uplift underserved communities and preserve social
                     and cultural values.
                 </p>
 
-                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
                     ➤ In the area of <strong>social welfare and traditions</strong>, we organize
                     Mass Marriage (<em>Samuh Lagan</em>) ceremonies to help underprivileged
                     couples begin their lives with dignity and community support.
                 </p>
 
-                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
                     ➤ Our efforts in <strong>education and spirituality</strong> include the
                     Shrimad Bhagavad Gita Gyan Kasoti, an initiative aimed at nurturing moral
                     values, spiritual wisdom, and cultural awareness among the youth.
                 </p>
 
-                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
                     ➤ To support <strong>child nutrition and wellbeing</strong>, we regularly
                     organize Batuk Bhojan programs—community meals for children—in Government
                     Schools, helping ensure access to nutritious food and a healthier future.
                 </p>
 
-                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
                     ➤ Our <strong>health and relief initiatives</strong> include Free Sharbat
                     Distribution during extreme summer conditions and Free Blanket and Clothes
                     Distribution drives during winter, providing immediate relief to those in
                     need.
                 </p>
 
-                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
                     ➤ We also believe in <strong>empowering talent and cultural expression</strong>.
                     Through activities such as Mehendi Competitions, we create platforms for
                     local artists and individuals to showcase their skills, creativity, and
                     cultural heritage.
                 </p>
 
-                <p style={{ marginBottom: "1rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem"}}>
                     ➤ The organization is guided by the visionary leadership of
                     <strong> Mahendra Ayalani</strong>, who oversees both The Namrtagreen
                     Organization Inc. (USA) and the Namrtagreen Foundation (India). In India, our
@@ -80,7 +80,7 @@ const About = () => {
                     <strong> Kajal Vala</strong>, President of Mahila Morcha.
                 </p>
 
-                <p style={{ lineHeight: "1.8" }}>
+                <p style={{ lineHeight: "1.8" , padding: "1.50rem"}}>
                     ➤ By establishing a presence in the United States, we are committed to
                     upholding international standards of <strong>transparency, efficiency, and
                         accountability</strong>. Every contribution and effort is directed toward
