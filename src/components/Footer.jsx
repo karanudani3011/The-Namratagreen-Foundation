@@ -111,7 +111,7 @@ const Footer = () => {
 
             <div className="container" style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
                 <p style={{ opacity: 0.6, fontSize: '0.9rem' }}>
-                    &copy; {new Date().getFullYear()} The Namrtagreen Organization Inc. All rights reserved.
+                    &copy; {new Date().getFullYear()} The Namrta green Organization Inc. All rights reserved.
                 </p>
             </div> 
             

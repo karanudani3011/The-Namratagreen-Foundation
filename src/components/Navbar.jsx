@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="navContainer">
                 <Link to="/" className="logo" onClick={closeMenu}>
                     <img src={require('../assets/logo.jpg')} alt="Namrta Green Logo" style={{ height: '80px', width: '80px', objectFit: 'contain', marginRight: '10px' }} />
-                    <span style={{ fontSize: '1.2rem', lineHeight: '1.2' }}> The NamrtaGreen<br />Organization Inc</span>
+                    <span style={{ fontSize: '1.2rem', lineHeight: '1.2' }}> The Namrta Green<br />Organization Inc</span>
                 </Link>
 
                 <div className="mobileToggle" onClick={toggleMenu}>

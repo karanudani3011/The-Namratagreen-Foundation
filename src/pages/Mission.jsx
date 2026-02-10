@@ -21,7 +21,7 @@ const Mission = () => {
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                 <h1 className="sectionTitle">Mission, Vision & Values</h1>
                 <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', color: 'var(--color-text-light)' }}>
-                    The core principles that guide every action we take at the Namratagreen Organization.
+                    The core principles that guide every action we take at the Namrata green Organization.
                 </p>
             </div>
 

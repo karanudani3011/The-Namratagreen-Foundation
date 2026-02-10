@@ -8,7 +8,7 @@ const About = () => {
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                 <h1 className="sectionTitle">Who We Are</h1>
                 <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.2rem', color: 'var(--color-text-light)' }}>
-                  The Namrtagreen Organization Inc. is a non-profit organization dedicated to fostering a sustainable relationship between humanity and nature.
+                  The Namrta green Organization Inc. is a non-profit organization dedicated to fostering a sustainable relationship between humanity and nature.
                 </p>
             </div>
 
@@ -23,7 +23,7 @@ const About = () => {
                 </h2>
 
                 <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
-                    ➤ <strong>The Namrtagreen Organization Inc.</strong> is a dedicated non-profit
+                    ➤ <strong>The Namrta green Organization Inc.</strong> is a dedicated non-profit
                     entity based in the United States, led by our President,
                     <strong> Mahendra Ayalani</strong>. The organization serves as an
                     international extension of the impactful social work carried out in India
@@ -34,7 +34,7 @@ const About = () => {
 
                 <p style={{ marginBottom: "1rem", lineHeight: "1.8" , padding: "1.50rem" }}>
                     ➤ Our roots are deeply embedded in community service across India. Through the
-                    Namrtagreen Foundation, we actively engage in a wide range of philanthropic
+                    Namrta green Foundation, we actively engage in a wide range of philanthropic
                     initiatives designed to uplift underserved communities and preserve social
                     and cultural values.
                 </p>

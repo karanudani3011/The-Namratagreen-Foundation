@@ -11,7 +11,7 @@ const Home = () => {
                 <div className="heroContent">
                     <h1 className="heroTitle">Plant a Tree, Save the Future</h1>
                     <p className="heroSubtitle">
-                        Join the Namratagreen Organization in our mission to restore forests, protect wildlife, and create a sustainable planet for generations to come.
+                        Join the Namrata green Organization in our mission to restore forests, protect wildlife, and create a sustainable planet for generations to come.
                     </p>
                     <div className="heroButtons">
                        <a href='https://buymeacoffee.com/namrtagreen' className="btn btn-primary">
@@ -33,7 +33,7 @@ const Home = () => {
 
                 <div className="statsGrid">
                     <div className="statItem">
-                        <span className="statNumber">50K</span>
+                        <span className="statNumber">1K</span>
                         <span>Trees Planted</span>
                     </div>
                     <div className="statItem">
@@ -41,7 +41,7 @@ const Home = () => {
                         <span>Projects Completed</span>
                     </div>
                     <div className="statItem">
-                        <span className="statNumber">20</span>
+                        <span className="statNumber">100</span>
                         <span>Volunteers</span>
                     </div>
                     { /*<div className="statItem">
